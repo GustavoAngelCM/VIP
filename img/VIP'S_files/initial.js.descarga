@@ -1,0 +1,27 @@
+$(document).ready(function ()
+  {
+    ingresar();
+  }
+);
+
+function ingresar()
+{
+  $('#ingresar_frm').submit(function (e)
+    {
+      e.preventDefault();
+      var sec = "vipforever";
+      var secpas = "vip123456789forgod"
+      var user = $('#user').val();
+      var pass = $('#password').val();
+      if (user === sec && pass === secpas)
+      {
+        $('#sectionComplet').show(1000);
+        $('#ingresar').toggle('modal');
+      }
+      else
+      {
+        $('#resp').html('<div class="alert alert-danger" role="alert"> Acceso Denegado </div>');
+      }
+    }
+  );
+}
